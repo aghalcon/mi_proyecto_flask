@@ -1,0 +1,120 @@
+<!-- app/templates/contact.html -->
+{% extends 'base.html' %}
+
+{% block title %}Contacto - Mi Página Web{% endblock %}
+
+{% block content %}
+<section class="contact-section mt-4">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eef2f3; /* Color de fondo suave */
+        }
+
+        .contact-section h1 {
+            text-align: center;
+            margin-bottom: 1em;
+            color: #333; /* Color del título */
+        }
+
+        .contact-section p {
+            text-align: justify;
+            margin-bottom: 1em;
+            color: #555; /* Color del texto */
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #28a745; /* Borde verde */
+            border-radius: 8px; /* Bordes más redondeados */
+            background-color: #ffffff; /* Fondo blanco */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column; /* Coloca los elementos uno debajo del otro */
+            gap: 1em; /* Espacio entre los elementos del formulario */
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column; /* Coloca las etiquetas y inputs uno debajo del otro */
+            align-items: flex-start; /* Alinea las etiquetas a la izquierda */
+        }
+
+        label {
+            font-weight: bold;
+            color: #28a745; /* Color de las etiquetas */
+            margin-bottom: 0.5em; /* Espacio entre la etiqueta y el input */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            border: 2px solid #28a745; /* Borde verde */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: border-color 0.3s; /* Transición suave al cambiar el borde */
+            font-size: 16px;
+            width: 100%; /* Asegura que los inputs ocupen todo el ancho */
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #218838; /* Color del borde al enfocar */
+            outline: none; /* Quita el borde por defecto */
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745; /* Fondo verde */
+            color: #fff; /* Color del texto */
+            font-size: 16px;
+            cursor: pointer; /* Cambia el cursor al pasar el ratón */
+            transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+        }
+
+        button:hover {
+            background-color: #218838; /* Color de fondo al pasar el ratón */
+        }
+
+        @media (max-width: 600px) {
+            .contact-info {
+                width: 90%; /* Aumenta el ancho en pantallas pequeñas */
+            }
+        }
+    </style>
+
+    <div class="text-center contact-info">
+        <h1>Contacto</h1>
+        <p>En <strong>Inmuebles Innovadores</strong>, valoramos tu comunicación. Puedes contactarnos a través de los siguientes medios:</p>
+        <p><strong>Correo Electrónico:</strong> <a href="mailto:contacto@inmueblesinnovadores.com">contacto@inmueblesinnovadores.com</a></p>
+        <p><strong>Teléfono:</strong> +51 123 456 789</p>
+        <p><strong>Dirección:</strong> Av. Principal 123, San Martín, Perú</p>
+
+        <h3>Formulario de Contacto</h3>
+        <form>
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

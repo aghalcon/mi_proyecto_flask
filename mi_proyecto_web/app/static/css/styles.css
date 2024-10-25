@@ -1,0 +1,82 @@
+/* app/static/css/styles.css */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container {
+    flex: 1;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* app/static/css/styles.css */
+
+/* Ajustar la altura del carrusel */
+#miCarrusel .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Personalizar los indicadores */
+.carousel-indicators [data-bs-target] {
+    background-color: #fff;
+}
+
+.carousel-indicators .active {
+    background-color: #007bff;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #e9ecef;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+/* Secciones en about.html */
+.about-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Artículos dentro de las secciones */
+.about-section article {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+}
